@@ -20,7 +20,7 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 * The app will store every burger in a database, whether devoured or not.
 
-* [Here is a live demo](/public/assets/images/demo.gif).
+* ![Here is a live demo](/public/assets/images/demo.gif).
 
 ## Instructions
 
