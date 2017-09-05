@@ -4,29 +4,29 @@
 
 ### Overview
 
-In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
+Node burger logger with MySQL, Express, Handlebars and a homemade ORM (yum!), which follows the MVC design pattern. Node and MySQL to query and route data for the app, and Handlebars to generate the HTML.
 
 ### Important
 
-Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHerokuDeploymentProcess.pdf) in order to deploy your assignment.
+Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHerokuDeploymentProcess.pdf) in order to deploy.
 
-### Before You Begin
+### Overview
 
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
-* Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
+* Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be devoured.
 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
-* Your app will store every burger in a database, whether devoured or not.
+* The app will store every burger in a database, whether devoured or not.
 
-* [Check out this video of the app for a run-through of how it works](burger_demo.mp4).
+* [Here is a live demo](/public/assets/images/demo.gif).
 
 ## Instructions
 
 #### App Setup
 
-1. Create a GitHub repo called `burger` and clone it to your computer.
+1. Create a GitHub repo called `burger` and clone it to local computer.
 
 2. Make a package.json file by running `npm init` from the command line.
 
@@ -49,7 +49,7 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 #### DB Setup
 
-1. Inside your `burger` directory, create a folder named `db`.
+1. Inside the `burger` directory, create a folder named `db`.
 
 2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
 
@@ -65,21 +65,21 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
-5. Now you're going to run these SQL files. 
+5. Now run these SQL files. 
 
-   * Make sure you're in the `db` folder of your app.
+   * Go to the `db` folder of the app.
 
    * Start MySQL command line tool and login: `mysql -u root -p`.
 
-   * With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database.
+   * With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run the schema file and all of the queries in it -- in other words, creating the database.
 
-   * Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
+   * Now insert the entries defined in `seeds.sql` by running the file: `source seeds.sql`.
 
    * Close out of the MySQL command line tool: `exit`.
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+1. Inside the `burger` directory, create a folder named `config`.
 
 2. Create a `connection.js` file inside `config` directory.
 
@@ -91,7 +91,7 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
    * Import (require) `connection.js` into `orm.js`
 
-   * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+   * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods needed to retrieve and store data in the database.
 
      * `selectAll()` 
      * `insertOne()` 
@@ -101,7 +101,7 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 #### Model setup
 
-* Inside your `burger` directory, create a folder named `models`.
+* Inside the `burger` directory, create a folder named `models`.
 
   * In `models`, make a `burger.js` file.
 
@@ -113,7 +113,7 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. Inside the `burger` directory, create a folder named `controllers`.
 
 2. In `controllers`, create the `burgers_controller.js` file.
 
@@ -122,11 +122,11 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
    * Express
    * `burger.js`
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4. Create the `router` for the app, and export the `router` at the end of the file.
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+1. Inside the `burger` directory, create a folder named `views`.
 
    * Create the `index.handlebars` file inside `views` directory.
 
